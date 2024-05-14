@@ -24,25 +24,27 @@ public class MyClass {
     public static void expenseTracker(double income) {
         Scanner scan = new Scanner(System.in);
         int day = 1;
+        double house = income * housingPerc;
+        double insurance = income * insurancePerc;
+        double food = income * foodPerc;
+        double savings = income * savingsPerc;
+        double transportation = income * transportationPerc;
+        double entertainment = income * entertainmentPerc;
+        double personal = income * personalPerc;
+        double clothing = income * clothingPerc;
+        double utilities = income * utilitiesPerc;
 
         while (true) {
             System.out.println("\nDay: " + day);
-
-            double house = income * housingPerc;
-            double insurance = income * insurancePerc;
-            double food = income * foodPerc;
-            double savings = income * savingsPerc;
-            double transportation = income * transportationPerc;
-            double entertainment = income * entertainmentPerc;
-            double personal = income * personalPerc;
-            double clothing = income * clothingPerc;
-            double utilities = income * utilitiesPerc;
 
             while (true) {
                 System.out.println("What will you be spending your money on? (Type 'N' to move to the next day)");
                 String expense = scan.next();
                 if (expense.equalsIgnoreCase("N")) {
                     break;
+                } else if(expense.equalsIgnoreCase("exit")) {
+                    System.out.println("Thank you for using our expense tracker!");
+                    return;
                 }
 
                 double cost;
@@ -51,46 +53,82 @@ public class MyClass {
                     case "House":
                         System.out.println("How much will you be spending on House?");
                         cost = scan.nextDouble();
+                        if (cost > house) {
+                            System.out.println("Error: Expense exceeds available budget for House.");
+                            continue;
+                        }
                         house -= cost;
                         break;
                     case "Insurance":
                         System.out.println("How much will you be spending on Insurance?");
                         cost = scan.nextDouble();
+                        if(cost > insurance) {
+                            System.out.println("Error: Expense exceeds available budget for Insurance.");
+                            continue;
+                        }
                         insurance -= cost;
                         break;
                     case "Food":
                         System.out.println("How much will you be spending on Food?");
                         cost = scan.nextDouble();
+                        if(cost > food) {
+                            System.out.println("Error: Expense exceeds available budget for Food.");
+                            continue;
+                        }
                         food -= cost;
                         break;
                     case "Savings":
                         System.out.println("How much will you be spending on Savings?");
                         cost = scan.nextDouble();
+                        if(cost > savings) {
+                            System.out.println("Error: Expense exceeds available budget for Savings.");
+                            continue;
+                        }
                         savings -= cost;
                         break;
                     case "Transportation":
                         System.out.println("How much will you be spending on Transportation?");
                         cost = scan.nextDouble();
+                        if(cost > transportation) {
+                            System.out.println("Error: Expense exceeds available budget for Transportation.");
+                            continue;
+                        }
                         transportation -= cost;
                         break;
                     case "Entertainment":
                         System.out.println("How much will you be spending on Entertainment?");
                         cost = scan.nextDouble();
+                        if(cost > entertainment) {
+                            System.out.println("Error: Expense exceeds available budget for Entertainment.");
+                            continue;
+                        }
                         entertainment -= cost;
                         break;
                     case "Personal":
                         System.out.println("How much will you be spending on Personal?");
                         cost = scan.nextDouble();
+                        if(cost > personal) {
+                            System.out.println("Error: Expense exceeds available budget for Personal.");
+                            continue;
+                        }
                         personal -= cost;
                         break;
                     case "Utilities":
                         System.out.println("How much will you be spending on Utilities?");
                         cost = scan.nextDouble();
+                        if(cost > utilities) {
+                            System.out.println("Error: Expense exceeds available budget for Utilities.");
+                            continue;
+                        }
                         utilities -= cost;
                         break;
                     case "Clothing":
                         System.out.println("How much will you be spending on Clothing?");
                         cost = scan.nextDouble();
+                        if(cost > clothing) {
+                            System.out.println("Error: Expense exceeds available budget for Clothing.");
+                            continue;
+                        }
                         clothing -= cost;
                         break;
                     default:
