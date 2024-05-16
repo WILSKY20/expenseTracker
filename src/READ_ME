@@ -1,0 +1,19 @@
+Project Overview:
+The Expense Tracker allows users to manage their daily expenses based on their income. 
+Users can input their income, specify various expense categories, and record the amount spent in each category. 
+The application calculates and displays the remaining budget for each category and notifies the user if they exceed the allocated budget for any category.
+
+Key Features:
+- Income Input: Users can enter their income, which serves as the basis for budget allocation.
+- Expense Tracking: Users can input various expense categories such as housing, insurance, food, savings, transportation, utilities, entertainment, personal, and clothing.
+- Budget Calculation: The application calculates the budget allocation for each category based on the user's income.
+- Expense Validation: If the user tries to spend more than the allocated budget for a category, the application notifies them with an error message.
+- Dynamic Budget Adjustment: Users can add additional income, and the application dynamically adjusts the budget allocation for each category accordingly.
+
+Expected Outcomes:
+- Improved Financial Management: Users can gain better insights into their spending habits and manage their finances more effectively by tracking expenses across different categories.
+- Budget Awareness: The application increases awareness of budget allocation by displaying remaining budgets for each category, helping users make informed spending decisions.
+- User-Friendly Interface: With a simple and intuitive user interface, users can easily input income, expenses, and additional income, making the process of expense tracking straightforward and efficient.
+- Error Handling: The application provides error messages to notify users when they exceed the allocated budget for a specific category, encouraging responsible spending behavior.
+
+Overall, the Expense Tracker project aims to empower users to take control of their finances, track their spending, and make informed decisions to achieve their financial goals.
